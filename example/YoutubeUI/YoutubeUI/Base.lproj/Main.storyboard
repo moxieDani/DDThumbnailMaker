@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6qc-r6-V9G">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Youtube-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YoutubeUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Cxy-De-qlI">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="310" id="AbC-Xl-rrO" customClass="VideoTableViewCell" customModule="YoutubeUI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="310"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AbC-Xl-rrO" id="yEy-8G-w04">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="310"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yN8-Fv-Mtn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="210"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="210" id="jDV-Ue-Keu"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#swift #tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdE-X0-mIc">
+                                                    <rect key="frame" x="10" y="215" width="373" height="13.333333333333343"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="linkColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Embed Youtube Videos into your app In XCode" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msR-Gq-oc9">
+                                                    <rect key="frame" x="10" y="233.33333333333334" width="373" height="43.000000000000028"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Learn Swift - 10k views -1 week ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wW2-67-1wb">
+                                                    <rect key="frame" x="10" y="281.33333333333331" width="373" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yN8-Fv-Mtn" firstAttribute="top" secondItem="yEy-8G-w04" secondAttribute="top" id="3Rn-fi-aRZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="msR-Gq-oc9" secondAttribute="trailing" constant="10" id="DHH-yQ-0Zi"/>
+                                                <constraint firstItem="UdE-X0-mIc" firstAttribute="leading" secondItem="yEy-8G-w04" secondAttribute="leading" constant="10" id="E6I-lE-bLt"/>
+                                                <constraint firstItem="yN8-Fv-Mtn" firstAttribute="leading" secondItem="yEy-8G-w04" secondAttribute="leading" id="RAo-cM-7fy"/>
+                                                <constraint firstItem="UdE-X0-mIc" firstAttribute="top" secondItem="yN8-Fv-Mtn" secondAttribute="bottom" constant="5" id="Vug-cz-f4f"/>
+                                                <constraint firstItem="wW2-67-1wb" firstAttribute="leading" secondItem="yEy-8G-w04" secondAttribute="leading" constant="10" id="YMH-85-cJl"/>
+                                                <constraint firstAttribute="trailing" secondItem="wW2-67-1wb" secondAttribute="trailing" constant="10" id="auU-u4-CRQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="UdE-X0-mIc" secondAttribute="trailing" constant="10" id="eSW-yA-FcO"/>
+                                                <constraint firstAttribute="trailing" secondItem="yN8-Fv-Mtn" secondAttribute="trailing" id="f7b-qo-P88"/>
+                                                <constraint firstItem="msR-Gq-oc9" firstAttribute="leading" secondItem="yEy-8G-w04" secondAttribute="leading" constant="10" id="jkZ-1b-Z8B"/>
+                                                <constraint firstItem="yN8-Fv-Mtn" firstAttribute="top" secondItem="yEy-8G-w04" secondAttribute="top" id="mhn-iO-t2n"/>
+                                                <constraint firstItem="yN8-Fv-Mtn" firstAttribute="leading" secondItem="yEy-8G-w04" secondAttribute="leading" id="mvB-Qj-dSJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="yN8-Fv-Mtn" secondAttribute="trailing" id="vYm-68-EEV"/>
+                                                <constraint firstItem="msR-Gq-oc9" firstAttribute="top" secondItem="UdE-X0-mIc" secondAttribute="bottom" constant="5" id="wCR-hT-pqJ"/>
+                                                <constraint firstItem="wW2-67-1wb" firstAttribute="top" secondItem="msR-Gq-oc9" secondAttribute="bottom" constant="5" id="zkc-ub-XNK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img" destination="yN8-Fv-Mtn" id="3Un-zu-bnI"/>
+                                            <outlet property="shortDescription" destination="wW2-67-1wb" id="pBv-SS-E2J"/>
+                                            <outlet property="tags" destination="UdE-X0-mIc" id="Yql-Rd-972"/>
+                                            <outlet property="title" destination="msR-Gq-oc9" id="X24-ae-v5h"/>
+                                            <segue destination="tP7-eb-FXh" kind="show" id="iT0-RM-oqC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bKi-8J-g9d"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9iW-BC-ibG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cxy-De-qlI" secondAttribute="trailing" id="2Pi-BP-L2O"/>
+                            <constraint firstItem="Cxy-De-qlI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ana-IH-1pd"/>
+                            <constraint firstItem="Cxy-De-qlI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qnt-pM-Ths"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cxy-De-qlI" secondAttribute="bottom" id="yhY-JC-jPq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Youtube" id="vMh-aI-BgT">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="pEL-sX-uOZ"/>
+                        <barButtonItem key="rightBarButtonItem" image="person.circle.fill" catalog="system" id="cFU-sE-H9d"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Cxy-De-qlI" id="iam-rP-d8f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1391.6030534351144" y="3.5211267605633805"/>
+        </scene>
+        <!--Youtube-->
+        <scene sceneID="w6r-Pc-rRe">
+            <objects>
+                <viewController id="tP7-eb-FXh" customClass="DetailViewController" customModule="YoutubeUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TaU-Sv-ODB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uot-aT-ZYV">
+                                <rect key="frame" x="0.0" y="103" width="393" height="210"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3PA-pm-Q6Q">
+                                <rect key="frame" x="0.0" y="321" width="393" height="448"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="kAb-Ia-HCD">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="110"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#swift #tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CK5-Go-FAq">
+                                            <rect key="frame" x="163" y="48" width="142" height="13"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to Embed Youtube Videos into your app In XCode" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRa-pE-RA1">
+                                            <rect key="frame" x="8" y="0.0" width="373" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10k views 1 week ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9N-NW-It7">
+                                            <rect key="frame" x="8" y="46" width="147" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="channel-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="PNx-8i-B3z">
+                                            <rect key="frame" x="8" y="65" width="25" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's Learn Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loT-Q5-Pll">
+                                            <rect key="frame" x="33" y="67" width="165" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3.8M" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rm1-0k-bza">
+                                            <rect key="frame" x="206" y="70" width="27" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWR-M4-lKi">
+                                            <rect key="frame" x="249" y="67" width="103" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule" titleAlignment="automatic">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="Subscribe">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="8" name="ArialMT"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="296" id="bSB-5u-ujq" customClass="DetailTableViewCell" customModule="YoutubeUI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="160" width="393" height="296"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bSB-5u-ujq" id="Gk2-HM-PZ0">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="296"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to Embed Youtube Videos into your app In XCode" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzT-9J-Ahs">
+                                                    <rect key="frame" x="61" y="218" width="312" height="47"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's Learn Swift · 191K views · 15 hours ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odm-wy-nuK">
+                                                    <rect key="frame" x="61" y="266" width="302" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="channel-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="a8R-6f-VfX">
+                                                    <rect key="frame" x="10" y="218" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0qx-An-d94">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="210"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img" destination="0qx-An-d94" id="fDa-j5-NDW"/>
+                                            <outlet property="shortDescription" destination="Odm-wy-nuK" id="lmD-Vw-g6f"/>
+                                            <outlet property="title" destination="VzT-9J-Ahs" id="G7e-Kv-Q5M"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tP7-eb-FXh" id="EtJ-9l-vFE"/>
+                                    <outlet property="delegate" destination="tP7-eb-FXh" id="oqc-yR-R93"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0NP-dB-NdU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Youtube" id="7oF-Le-Ozw"/>
+                    <connections>
+                        <outlet property="channelName" destination="loT-Q5-Pll" id="yS3-bK-Bbc"/>
+                        <outlet property="detailDescription" destination="H9N-NW-It7" id="73Z-KN-N5v"/>
+                        <outlet property="detailTitle" destination="yRa-pE-RA1" id="GLj-tK-ZBF"/>
+                        <outlet property="tableView" destination="3PA-pm-Q6Q" id="Exn-tD-faC"/>
+                        <outlet property="tags" destination="CK5-Go-FAq" id="zBH-I5-uDR"/>
+                        <outlet property="webView" destination="Uot-aT-ZYV" id="lsI-Tv-g1h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F5w-Nh-lwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2141.2213740458014" y="2.8169014084507045"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9TU-tk-e9n">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6qc-r6-V9G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="home" id="g1z-lS-b2O">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" systemColor="systemRedColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pFj-9l-Rvh" kind="relationship" relationship="viewControllers" id="oXB-6S-iLX"/>
+                        <segue destination="5Ad-Fi-QHa" kind="relationship" relationship="viewControllers" id="bws-L4-sXA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Moy-ad-dRO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-51.145038167938928" y="3.5211267605633805"/>
+        </scene>
+        <!--Subscribe-->
+        <scene sceneID="F8Z-Ie-PeM">
+            <objects>
+                <viewController id="5Ad-Fi-QHa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JWy-Fg-TTK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="05k-v2-Laa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Subscribe" image="play.square.stack" catalog="system" id="qpZ-lE-Uwa">
+                        <color key="badgeColor" systemColor="systemRedColor"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Se9-fG-gzJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-51" y="663"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="FeD-F3-8AZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pFj-9l-Rvh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="fJV-QC-wS1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7ce-I5-cja">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yCM-FH-MX1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Umu-F4-kWO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="channel-logo.png" width="680" height="680"/>
+        <image name="home" width="128" height="128"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="play.square.stack" catalog="system" width="112" height="128"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
