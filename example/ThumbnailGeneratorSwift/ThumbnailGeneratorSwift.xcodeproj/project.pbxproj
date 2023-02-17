@@ -13,7 +13,7 @@
 		51CDA981299DE694008F8385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51CDA97F299DE694008F8385 /* Main.storyboard */; };
 		51CDA983299DE699008F8385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51CDA982299DE699008F8385 /* Assets.xcassets */; };
 		51CDA986299DE699008F8385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51CDA984299DE699008F8385 /* LaunchScreen.storyboard */; };
-		51CDA98E299E1195008F8385 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51CDA98D299E1195008F8385 /* test.mp4 */; };
+		51CDA990299F3F81008F8385 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51CDA98F299F3F81008F8385 /* test.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		51CDA982299DE699008F8385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51CDA985299DE699008F8385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51CDA987299DE699008F8385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		51CDA98D299E1195008F8385 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
+		51CDA98F299F3F81008F8385 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.mp4; path = ../../../resource/video/test.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				51CDA982299DE699008F8385 /* Assets.xcassets */,
 				51CDA984299DE699008F8385 /* LaunchScreen.storyboard */,
 				51CDA987299DE699008F8385 /* Info.plist */,
-				51CDA98D299E1195008F8385 /* test.mp4 */,
+				51CDA98F299F3F81008F8385 /* test.mp4 */,
 			);
 			path = ThumbnailGeneratorSwift;
 			sourceTree = "<group>";
@@ -131,7 +131,7 @@
 				51CDA986299DE699008F8385 /* LaunchScreen.storyboard in Resources */,
 				51CDA983299DE699008F8385 /* Assets.xcassets in Resources */,
 				51CDA981299DE694008F8385 /* Main.storyboard in Resources */,
-				51CDA98E299E1195008F8385 /* test.mp4 in Resources */,
+				51CDA990299F3F81008F8385 /* test.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
