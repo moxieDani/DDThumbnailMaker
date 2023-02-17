@@ -91,9 +91,6 @@
                                                         CMTime actualTime,
                                                         AVAssetImageGeneratorResult result,
                                                         NSError *error) {
-        NSString *requestedTimeString = (__bridge NSString *) CMTimeCopyDescription (NULL, requestedTime);
-        NSString *actualTimeString = (__bridge NSString *) CMTimeCopyDescription(NULL, actualTime);
-
         if (result == AVAssetImageGeneratorSucceeded) {
             if (actualTime.value != requestedTime.value) {
                 UIImage *img = [UIImage imageWithCGImage:image];
