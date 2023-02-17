@@ -9,10 +9,14 @@ import UIKit
 import AVKit
 
 class ViewController: UIViewController {
+    
+    var imageView = UIImageView(frame: CGRectMake(0,0,0,0))
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        imageView.backgroundColor = UIColor.black
+        self.view.addSubview(imageView)
         test()
     }
 
@@ -80,7 +84,7 @@ class ViewController: UIViewController {
             }
         }
 
-        // Store thumbnails every seconds.
+        // Show & store thumbnails every seconds.
         if let times = times as? [NSValue] {
             generator.generateCGImagesAsynchronously(forTimes: times) {
                 requestedTime, image, actualTime, result, error in
@@ -90,6 +94,12 @@ class ViewController: UIViewController {
                             if let image {
                                 img = UIImage(cgImage: image)
                                 if let data = img?.pngData() {
+                                    // Show thumbnail
+                                    DispatchQueue.main.async {
+                                        self.imageView.frame = CGRectMake((self.view.frame.size.width / 2) - (img!.size.width / 2), (self.view.frame.size.height / 2) - (img!.size.height / 2), img!.size.width, img!.size.height);
+                                        self.imageView.image = img
+                                    }
+                                    // Store thumbnail
                                     let filename = URL(fileURLWithPath: paths[0]).appendingPathComponent(String(format: "%lld_sec.png", requestedTime.value / Int64(requestedTime.timescale)))
                                     try? data.write(to: filename)
                                 }
