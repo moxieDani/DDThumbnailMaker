@@ -88,21 +88,19 @@ class ViewController: UIViewController {
         if let times = times as? [NSValue] {
             generator.generateCGImagesAsynchronously(forTimes: times) {
                 requestedTime, image, actualTime, result, error in
-                    if result == .succeeded {
-                        if actualTime.value != requestedTime.value {
-                            var img: UIImage? = nil
-                            if let image {
-                                img = UIImage(cgImage: image)
-                                if let data = img?.pngData() {
-                                    // Show thumbnail
-                                    DispatchQueue.main.async {
-                                        self.imageView.frame = CGRectMake((self.view.frame.size.width / 2) - (img!.size.width / 2), (self.view.frame.size.height / 2) - (img!.size.height / 2), img!.size.width, img!.size.height);
-                                        self.imageView.image = img
-                                    }
-                                    // Store thumbnail
-                                    let filename = URL(fileURLWithPath: paths[0]).appendingPathComponent(String(format: "%lld_sec.png", requestedTime.value / Int64(requestedTime.timescale)))
-                                    try? data.write(to: filename)
+                    if result == .succeeded && actualTime.value != requestedTime.value {
+                        var img: UIImage? = nil
+                        if let image {
+                            img = UIImage(cgImage: image)
+                            if let data = img?.pngData() {
+                                // Show thumbnail
+                                DispatchQueue.main.async {
+                                    self.imageView.frame = CGRectMake((self.view.frame.size.width / 2) - (img!.size.width / 2), (self.view.frame.size.height / 2) - (img!.size.height / 2), img!.size.width, img!.size.height);
+                                    self.imageView.image = img
                                 }
+                                // Store thumbnail
+                                let filename = URL(fileURLWithPath: paths[0]).appendingPathComponent(String(format: "%lld_sec.png", requestedTime.value / Int64(requestedTime.timescale)))
+                                try? data.write(to: filename)
                             }
                         }
                     }
