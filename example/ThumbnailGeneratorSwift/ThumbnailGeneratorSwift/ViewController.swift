@@ -51,7 +51,7 @@ class ViewController: UIViewController {
             return
         }
 
-        // set the number of frames in the avAsset
+        // set the information about frames in the avAsset
         let frameRate = try? await Int(foundTrack?.load(.nominalFrameRate) ?? 0)
 
         let value = try? await Float(avAsset.load(.duration).value)
@@ -62,12 +62,11 @@ class ViewController: UIViewController {
         let totalSeconds = value! / timeScale
         let totalFrames = Int(totalSeconds * Float(frameRate ?? 0))
         let timeValuePerFrame = Int(timeScale) / frameRate!
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).map(\.path)
-        var times: [AnyHashable] = []
         
         print("total frames \(totalFrames)")
         
         // get each frame
+        var times: [AnyHashable] = []
         for k in 1...totalFrames {
             let timeValue = UInt(timeValuePerFrame * k)
             let timeStampMsec = UInt(timeValue * 1000) / UInt(timeScale)
@@ -85,6 +84,7 @@ class ViewController: UIViewController {
         }
 
         // Show & store thumbnails every seconds.
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).map(\.path)
         if let times = times as? [NSValue] {
             generator.generateCGImagesAsynchronously(forTimes: times) {
                 requestedTime, image, actualTime, result, error in
