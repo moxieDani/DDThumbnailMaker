@@ -55,13 +55,13 @@ class ViewController: UIViewController {
         let frameRate = try? await Int(foundTrack?.load(.nominalFrameRate) ?? 0)
 
         let value = try? await Float(avAsset.load(.duration).value)
-        let timeScale = (try? await Float(avAsset.load(.duration).timescale)) ?? 0.0
+        let timeScale = try? await Float(avAsset.load(.duration).timescale)
         let flags = try? await avAsset.load(.duration).flags
         let epoch = try? await avAsset.load(.duration).epoch
 
-        let totalSeconds = value! / timeScale
-        let totalFrames = Int(totalSeconds * Float(frameRate ?? 0))
-        let timeValuePerFrame = Int(timeScale) / frameRate!
+        let totalSeconds = value! / timeScale!
+        let totalFrames = Int(totalSeconds * Float(frameRate!))
+        let timeValuePerFrame = Int(timeScale!) / frameRate!
         
         print("total frames \(totalFrames)")
         
@@ -69,13 +69,13 @@ class ViewController: UIViewController {
         var times: [AnyHashable] = []
         for k in 1...totalFrames {
             let timeValue = UInt(timeValuePerFrame * k)
-            let timeStampMsec = UInt(timeValue * 1000) / UInt(timeScale)
+            let timeStampMsec = UInt(timeValue * 1000) / UInt(timeScale!)
 
             // Set times every seconds : 1st frame + frame at 1000*n msec.
             if k == 1 || timeStampMsec % 1000 == 0 {
                 var frameTime: CMTime! = CMTime()
                 frameTime.value = CMTimeValue(timeValue)
-                frameTime.timescale = CMTimeScale(timeScale)
+                frameTime.timescale = CMTimeScale(timeScale!)
                 frameTime.flags = flags!
                 frameTime.epoch = epoch!
                 print(String(format: "Set time at Frame %d Time Stamp %lld", k, CMTimeScale(frameTime.value * 1000) / frameTime.timescale))
@@ -99,8 +99,10 @@ class ViewController: UIViewController {
                                     self.imageView.image = img
                                 }
                                 // Store thumbnail
-                                let filename = URL(fileURLWithPath: paths[0]).appendingPathComponent(String(format: "%lld_sec.png", requestedTime.value / Int64(requestedTime.timescale)))
-                                try? data.write(to: filename)
+                                let fileName = String(format: "%lld_sec.png", requestedTime.value / Int64(requestedTime.timescale))
+                                let filePath = URL(fileURLWithPath: paths[0]).appendingPathComponent(fileName)
+                                try? data.write(to: filePath)
+                                print("Store file : \(fileName)")
                             }
                         }
                     }
