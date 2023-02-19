@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         print("total frames \(totalFrames)")
         
         // get each frame
-        var times: [AnyHashable] = []
+        var times: [NSValue] = []
         for k in 1...totalFrames {
             let timeValue = UInt(timeValuePerFrame * k)
             let timeStampMsec = UInt(timeValue * 1000) / UInt(timeScale!)
@@ -84,28 +84,25 @@ class ViewController: UIViewController {
         }
 
         // Show & store thumbnails every seconds.
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).map(\.path)
-        if let times = times as? [NSValue] {
-            generator.generateCGImagesAsynchronously(forTimes: times) {
-                requestedTime, image, actualTime, result, error in
-                    if result == .succeeded && actualTime.value != requestedTime.value {
-                        var img: UIImage? = nil
-                        if let image {
-                            img = UIImage(cgImage: image)
-                            if let data = img?.pngData() {
-                                // Show thumbnail
-                                DispatchQueue.main.async {
-                                    self.imageView.frame = CGRectMake((self.view.frame.size.width / 2) - (img!.size.width / 2), (self.view.frame.size.height / 2) - (img!.size.height / 2), img!.size.width, img!.size.height);
-                                    self.imageView.image = img
-                                }
-                                // Store thumbnail
-                                let fileName = String(format: "%lld_sec.png", requestedTime.value / Int64(requestedTime.timescale))
-                                let filePath = URL(fileURLWithPath: paths[0]).appendingPathComponent(fileName)
-                                try? data.write(to: filePath)
-                                print("Store file : \(fileName)")
-                            }
-                        }
-                    }
+        let storePaths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).map(\.path)
+        generator.generateCGImagesAsynchronously(forTimes: times) { (requestedTime, image, actualTime, result, error) in
+            if result == .succeeded && actualTime.value != requestedTime.value {
+                let img = UIImage(cgImage: image!)
+                // Show thumbnail
+                DispatchQueue.main.async {
+                    self.imageView.frame = CGRectMake((self.view.frame.size.width / 2) - (img.size.width / 2),
+                                                      (self.view.frame.size.height / 2) - (img.size.height / 2),
+                                                      img.size.width,
+                                                      img.size.height);
+                    self.imageView.image = img
+                }
+                // Store thumbnail
+                if let data = img.pngData() {
+                    let fileName = String(format: "%lld_sec.png", requestedTime.value / Int64(requestedTime.timescale))
+                    let filePath = URL(fileURLWithPath: storePaths[0]).appendingPathComponent(fileName)
+                    try? data.write(to: filePath)
+                    print("Store file : \(fileName)")
+                }
             }
         }
     }
