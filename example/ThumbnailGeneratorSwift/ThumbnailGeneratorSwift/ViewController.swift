@@ -10,12 +10,17 @@ import AVKit
 
 class ViewController: UIViewController {
     
-    var imageView = UIImageView(frame: CGRectMake(0,0,0,0))
+    var imageView = UIImageView()
+    var thumbnailImageWidth = CGFloat(192)
+    var thumbnailImageHeight = CGFloat(144)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        imageView.backgroundColor = UIColor.black
+        self.imageView.frame = CGRectMake((self.view.frame.size.width / 2) - (self.thumbnailImageWidth / 2),
+                                          (self.view.frame.size.height / 2) - (self.thumbnailImageHeight / 2),
+                                          self.thumbnailImageWidth,
+                                          self.thumbnailImageHeight);
         self.view.addSubview(imageView)
         test()
     }
@@ -34,7 +39,7 @@ class ViewController: UIViewController {
         let generator = AVAssetImageGenerator(asset: avAsset)
         generator.requestedTimeToleranceBefore = .zero
         generator.requestedTimeToleranceAfter = .zero
-        generator.maximumSize = CGSize(width: 192, height: 144)
+        generator.maximumSize = CGSize(width: self.thumbnailImageWidth, height: self.thumbnailImageHeight)
         
         // look for the video track
         let tracks = try? await avAsset.load(.tracks)
@@ -90,10 +95,6 @@ class ViewController: UIViewController {
                 let img = UIImage(cgImage: image!)
                 // Show thumbnail
                 DispatchQueue.main.async {
-                    self.imageView.frame = CGRectMake((self.view.frame.size.width / 2) - (img.size.width / 2),
-                                                      (self.view.frame.size.height / 2) - (img.size.height / 2),
-                                                      img.size.width,
-                                                      img.size.height);
                     self.imageView.image = img
                 }
                 // Store thumbnail
