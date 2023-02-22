@@ -1,6 +1,6 @@
 //
-//  DDThumbnailMaker.swift
-//  DDThumbnailMaker
+//  DDThumbnailMakerFramework.swift
+//  DDThumbnailMakerFramework
 //
 //  Created by Daniel on 2023/02/22.
 //
@@ -17,11 +17,11 @@ public class DDThumbnailMaker {
     
     private var generator : AVAssetImageGenerator? = nil
 
-    init(_ avAsset: AVAsset) {
+    public init(_ avAsset: AVAsset) {
         self.avAsset = avAsset
     }
     
-    init(_ url:URL) {
+    public init(_ url:URL) {
         self.avAsset = AVAsset(url: url)
     }
     
@@ -86,3 +86,4 @@ public class DDThumbnailMaker {
         return times
     }
 }
+

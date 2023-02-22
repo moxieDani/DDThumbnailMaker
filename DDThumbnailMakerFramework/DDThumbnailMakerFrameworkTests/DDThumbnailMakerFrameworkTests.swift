@@ -1,14 +1,14 @@
 //
-//  DDThumbnailMakerTests.swift
-//  DDThumbnailMakerTests
+//  DDThumbnailMakerFrameworkTests.swift
+//  DDThumbnailMakerFrameworkTests
 //
 //  Created by Daniel on 2023/02/22.
 //
 
 import XCTest
-@testable import DDThumbnailMaker
+@testable import DDThumbnailMakerFramework
 
-final class DDThumbnailMakerTests: XCTestCase {
+final class DDThumbnailMakerFrameworkTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
