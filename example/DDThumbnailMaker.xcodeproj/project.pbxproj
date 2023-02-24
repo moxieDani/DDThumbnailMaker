@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51CDAB0F29A8A483008F8385 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51CDAB0E29A8A482008F8385 /* test.mp4 */; };
+		51C27C4429A8C5A400ECF061 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51C27C4329A8C5A400ECF061 /* test.mp4 */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -32,7 +32,7 @@
 		08F4E978E62E9161154B3EF6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		0D2901503E6D308D1541F7C2 /* Pods_DDThumbnailMaker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDThumbnailMaker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		128CBF08C1C28AA6C49DAE27 /* Pods-DDThumbnailMaker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDThumbnailMaker_Example.release.xcconfig"; path = "Target Support Files/Pods-DDThumbnailMaker_Example/Pods-DDThumbnailMaker_Example.release.xcconfig"; sourceTree = "<group>"; };
-		51CDAB0E29A8A482008F8385 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
+		51C27C4329A8C5A400ECF061 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.mp4; path = ../../resource/video/test.mp4; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* DDThumbnailMaker_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDThumbnailMaker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
-				51CDAB0E29A8A482008F8385 /* test.mp4 */,
+				51C27C4329A8C5A400ECF061 /* test.mp4 */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for DDThumbnailMaker";
@@ -254,7 +254,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				51CDAB0F29A8A483008F8385 /* test.mp4 in Resources */,
+				51C27C4429A8C5A400ECF061 /* test.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
