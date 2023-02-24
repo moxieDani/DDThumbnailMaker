@@ -44,8 +44,8 @@ public class DDThumbnailMaker {
     
     private func getAVAssetImageGenerator(_ avAsset: AVAsset) -> AVAssetImageGenerator {
         let generator = AVAssetImageGenerator(asset: avAsset)
-        generator.requestedTimeToleranceBefore = kCMTimeZero
-        generator.requestedTimeToleranceAfter = kCMTimeZero
+        generator.requestedTimeToleranceBefore = .zero
+        generator.requestedTimeToleranceAfter = .zero
         generator.maximumSize = self.thumbnailImageSize!
         
         return generator
