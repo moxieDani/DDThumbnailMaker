@@ -1,0 +1,22 @@
+{
+  "name": "DDThumbnailMaker",
+  "version": "0.1.0",
+  "summary": "A short description of DDThumbnailMaker.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/moxieDani/DDThumbnailMaker",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "moxieDani": "moxie2ks@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/moxieDani/DDThumbnailMaker.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "DDThumbnailMaker/Classes/**/*"
+}

@@ -1,6 +1,6 @@
 //
-//  DDThumbnailMakerFramework.swift
-//  DDThumbnailMakerFramework
+//  DDThumbnailMaker.swift
+//  DDThumbnailMaker
 //
 //  Created by Daniel on 2023/02/22.
 //
@@ -44,8 +44,8 @@ public class DDThumbnailMaker {
     
     private func getAVAssetImageGenerator(_ avAsset: AVAsset) -> AVAssetImageGenerator {
         let generator = AVAssetImageGenerator(asset: avAsset)
-        generator.requestedTimeToleranceBefore = .zero
-        generator.requestedTimeToleranceAfter = .zero
+        generator.requestedTimeToleranceBefore = kCMTimeZero
+        generator.requestedTimeToleranceAfter = kCMTimeZero
         generator.maximumSize = self.thumbnailImageSize!
         
         return generator
@@ -86,4 +86,5 @@ public class DDThumbnailMaker {
         return times
     }
 }
+
 
