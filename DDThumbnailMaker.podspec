@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '16.0'
 
   s.source_files = 'DDThumbnailMaker/Classes/**/*'
-  
+  s.swift_version = '5.0'
   # s.resource_bundles = {
   #   'DDThumbnailMaker' => ['DDThumbnailMaker/Assets/*.png']
   # }
