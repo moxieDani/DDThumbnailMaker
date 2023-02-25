@@ -1,6 +1,6 @@
 //
-//  DDThumbnailMakerFramework.swift
-//  DDThumbnailMakerFramework
+//  DDThumbnailMaker.swift
+//  DDThumbnailMaker
 //
 //  Created by Daniel on 2023/02/22.
 //
@@ -86,4 +86,5 @@ public class DDThumbnailMaker {
         return times
     }
 }
+
 
