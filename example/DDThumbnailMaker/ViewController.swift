@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         self.view.addSubview(imageView)
         let videoURL = URL(fileURLWithPath: Bundle.main.path(forResource: "test", ofType: "mp4") ?? "")
         let thumbnailMaker = DDThumbnailMaker.init(videoURL)
-        thumbnailMaker.thumbnailImageSize = CGSize(width: <width>, height: <height>)
+        thumbnailMaker.thumbnailImageSize = CGSize(width: self.thumbnailImageWidth, height: self.thumbnailImageHeight)
         thumbnailMaker.intervalMsec = 1000
         thumbnailMaker.intervalFrame = 60
         thumbnailMaker.generate { requestedTime, image, actualTime, result, error in
