@@ -24,6 +24,31 @@ DDThumbnailMaker is available for XCFramework.
 2. Drag & drop `DDThumbnailMaker.xcframework` into your project.
 3. Set `Embeded & Sign` on the `Project -> general -> Frameworks, Libraries, and Embeded Content`
 
+## How to use
+```swift
+  import DDThumbnailMaker
+  
+  ....
+
+  // init DDThumbnailMaker
+  let thumbnailMaker = DDThumbnailMaker.init(<URL>)
+
+  // Set configuration - image size of output thumbnail
+  thumbnailMaker.thumbnailImageSize = CGSize(width: <width>, height: <height>)
+
+  // Set configuration - interval of Msec.
+  thumbnailMaker.intervalMsec = 1000 //1000 mesc
+
+  // Set configuration - interval of the number of frame. This ignores the settings of intervalMesec.
+  thumbnailMaker.intervalFrame = 60 //60 frames
+
+  // Generate thumbnails.
+  thumbnailMaker.generate { requestedTime, image, actualTime, result, error in
+      // Do something when a thumbnail generated.
+  }
+  
+  ....
+```
 ## Author
 
 moxieDani, moxie2ks@gmail.com
