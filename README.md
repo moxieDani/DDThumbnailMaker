@@ -7,9 +7,7 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+To run the example project, clone the repo, and run `pod install` from the `Example` directory first.
 
 ## Installation
 
@@ -19,6 +17,12 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'DDThumbnailMaker'
 ```
+
+## Available XCFramework
+DDThumbnailMaker is available for XCFramework.  
+1. execute `sh build_xcframework.sh` from the `XCFramework` directory.
+2. Drag & drop `DDThumbnailMaker.xcframework` into your project.
+3. Set `Embeded & Sign` on the `Project -> general -> Frameworks, Libraries, and Embeded Content`
 
 ## Author
 

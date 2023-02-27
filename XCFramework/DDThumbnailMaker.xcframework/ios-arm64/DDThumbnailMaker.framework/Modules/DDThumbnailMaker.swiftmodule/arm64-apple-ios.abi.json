@@ -1,0 +1,657 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DDThumbnailMaker",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "DDThumbnailMaker"
+      },
+      {
+        "kind": "Import",
+        "name": "AVKit",
+        "printedName": "AVKit",
+        "declKind": "Import",
+        "moduleName": "DDThumbnailMaker"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DDThumbnailMaker",
+        "printedName": "DDThumbnailMaker",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "avAsset",
+            "printedName": "avAsset",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AVFoundation.AVAsset?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAsset",
+                    "printedName": "AVFoundation.AVAsset",
+                    "usr": "c:objc(cs)AVAsset"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DDThumbnailMakerAAC7avAssetSo7AVAssetCSgvp",
+            "mangledName": "$s16DDThumbnailMakerAAC7avAssetSo7AVAssetCSgvp",
+            "moduleName": "DDThumbnailMaker",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AVFoundation.AVAsset?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AVAsset",
+                        "printedName": "AVFoundation.AVAsset",
+                        "usr": "c:objc(cs)AVAsset"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DDThumbnailMakerAAC7avAssetSo7AVAssetCSgvg",
+                "mangledName": "$s16DDThumbnailMakerAAC7avAssetSo7AVAssetCSgvg",
+                "moduleName": "DDThumbnailMaker",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AVFoundation.AVAsset?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AVAsset",
+                        "printedName": "AVFoundation.AVAsset",
+                        "usr": "c:objc(cs)AVAsset"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DDThumbnailMakerAAC7avAssetSo7AVAssetCSgvs",
+                "mangledName": "$s16DDThumbnailMakerAAC7avAssetSo7AVAssetCSgvs",
+                "moduleName": "DDThumbnailMaker",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DDThumbnailMakerAAC7avAssetSo7AVAssetCSgvM",
+                "mangledName": "$s16DDThumbnailMakerAAC7avAssetSo7AVAssetCSgvM",
+                "moduleName": "DDThumbnailMaker",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "intervalMsec",
+            "printedName": "intervalMsec",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.UInt?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DDThumbnailMakerAAC12intervalMsecSuSgvp",
+            "mangledName": "$s16DDThumbnailMakerAAC12intervalMsecSuSgvp",
+            "moduleName": "DDThumbnailMaker",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.UInt?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt",
+                        "printedName": "Swift.UInt",
+                        "usr": "s:Su"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DDThumbnailMakerAAC12intervalMsecSuSgvg",
+                "mangledName": "$s16DDThumbnailMakerAAC12intervalMsecSuSgvg",
+                "moduleName": "DDThumbnailMaker",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.UInt?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt",
+                        "printedName": "Swift.UInt",
+                        "usr": "s:Su"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DDThumbnailMakerAAC12intervalMsecSuSgvs",
+                "mangledName": "$s16DDThumbnailMakerAAC12intervalMsecSuSgvs",
+                "moduleName": "DDThumbnailMaker",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DDThumbnailMakerAAC12intervalMsecSuSgvM",
+                "mangledName": "$s16DDThumbnailMakerAAC12intervalMsecSuSgvM",
+                "moduleName": "DDThumbnailMaker",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "intervalFrame",
+            "printedName": "intervalFrame",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.UInt?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DDThumbnailMakerAAC13intervalFrameSuSgvp",
+            "mangledName": "$s16DDThumbnailMakerAAC13intervalFrameSuSgvp",
+            "moduleName": "DDThumbnailMaker",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.UInt?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt",
+                        "printedName": "Swift.UInt",
+                        "usr": "s:Su"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DDThumbnailMakerAAC13intervalFrameSuSgvg",
+                "mangledName": "$s16DDThumbnailMakerAAC13intervalFrameSuSgvg",
+                "moduleName": "DDThumbnailMaker",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.UInt?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt",
+                        "printedName": "Swift.UInt",
+                        "usr": "s:Su"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DDThumbnailMakerAAC13intervalFrameSuSgvs",
+                "mangledName": "$s16DDThumbnailMakerAAC13intervalFrameSuSgvs",
+                "moduleName": "DDThumbnailMaker",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DDThumbnailMakerAAC13intervalFrameSuSgvM",
+                "mangledName": "$s16DDThumbnailMakerAAC13intervalFrameSuSgvM",
+                "moduleName": "DDThumbnailMaker",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "thumbnailImageSize",
+            "printedName": "thumbnailImageSize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreFoundation.CGSize?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "usr": "c:@S@CGSize"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DDThumbnailMakerAAC18thumbnailImageSizeSo6CGSizeVSgvp",
+            "mangledName": "$s16DDThumbnailMakerAAC18thumbnailImageSizeSo6CGSizeVSgvp",
+            "moduleName": "DDThumbnailMaker",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreFoundation.CGSize?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGSize",
+                        "printedName": "CoreFoundation.CGSize",
+                        "usr": "c:@S@CGSize"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DDThumbnailMakerAAC18thumbnailImageSizeSo6CGSizeVSgvg",
+                "mangledName": "$s16DDThumbnailMakerAAC18thumbnailImageSizeSo6CGSizeVSgvg",
+                "moduleName": "DDThumbnailMaker",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreFoundation.CGSize?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGSize",
+                        "printedName": "CoreFoundation.CGSize",
+                        "usr": "c:@S@CGSize"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DDThumbnailMakerAAC18thumbnailImageSizeSo6CGSizeVSgvs",
+                "mangledName": "$s16DDThumbnailMakerAAC18thumbnailImageSizeSo6CGSizeVSgvs",
+                "moduleName": "DDThumbnailMaker",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DDThumbnailMakerAAC18thumbnailImageSizeSo6CGSizeVSgvM",
+                "mangledName": "$s16DDThumbnailMakerAAC18thumbnailImageSizeSo6CGSizeVSgvM",
+                "moduleName": "DDThumbnailMaker",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DDThumbnailMaker",
+                "printedName": "DDThumbnailMaker.DDThumbnailMaker",
+                "usr": "s:16DDThumbnailMakerAAC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVAsset",
+                "printedName": "AVFoundation.AVAsset",
+                "usr": "c:objc(cs)AVAsset"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16DDThumbnailMakerAACyABSo7AVAssetCcfc",
+            "mangledName": "$s16DDThumbnailMakerAACyABSo7AVAssetCcfc",
+            "moduleName": "DDThumbnailMaker",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DDThumbnailMaker",
+                "printedName": "DDThumbnailMaker.DDThumbnailMaker",
+                "usr": "s:16DDThumbnailMakerAAC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16DDThumbnailMakerAACyAB10Foundation3URLVcfc",
+            "mangledName": "$s16DDThumbnailMakerAACyAB10Foundation3URLVcfc",
+            "moduleName": "DDThumbnailMaker",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "generate",
+            "printedName": "generate(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CoreMedia.CMTime, CoreGraphics.CGImage?, CoreMedia.CMTime, AVFoundation.AVAssetImageGenerator.Result, Foundation.NSError?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(CoreMedia.CMTime, CoreGraphics.CGImage?, CoreMedia.CMTime, AVFoundation.AVAssetImageGenerator.Result, Foundation.NSError?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CMTime",
+                        "printedName": "CoreMedia.CMTime",
+                        "usr": "c:@SA@CMTime"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "CoreGraphics.CGImage?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGImage",
+                            "printedName": "CoreGraphics.CGImage",
+                            "usr": "c:@T@CGImageRef"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CMTime",
+                        "printedName": "CoreMedia.CMTime",
+                        "usr": "c:@SA@CMTime"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "AVFoundation.AVAssetImageGenerator.Result",
+                        "usr": "c:@E@AVAssetImageGeneratorResult"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.NSError?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NSError",
+                            "printedName": "Foundation.NSError",
+                            "usr": "c:objc(cs)NSError"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DDThumbnailMakerAAC8generateyyySo6CMTimea_So10CGImageRefaSgAESo27AVAssetImageGeneratorResultVSo7NSErrorCSgtcF",
+            "mangledName": "$s16DDThumbnailMakerAAC8generateyyySo6CMTimea_So10CGImageRefaSgAESo27AVAssetImageGeneratorResultVSo7NSErrorCSgtcF",
+            "moduleName": "DDThumbnailMaker",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16DDThumbnailMakerAAC",
+        "mangledName": "$s16DDThumbnailMakerAAC",
+        "moduleName": "DDThumbnailMaker",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/Daniel\/Documents\/github\/DDThumbnailMaker\/DDThumbnailMaker\/Classes\/DDThumbnailMaker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 249,
+      "length": 4,
+      "value": "1000"
+    },
+    {
+      "filePath": "\/Users\/Daniel\/Documents\/github\/DDThumbnailMaker\/DDThumbnailMaker\/Classes\/DDThumbnailMaker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 292,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Daniel\/Documents\/github\/DDThumbnailMaker\/DDThumbnailMaker\/Classes\/DDThumbnailMaker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 353,
+      "length": 3,
+      "value": "192"
+    },
+    {
+      "filePath": "\/Users\/Daniel\/Documents\/github\/DDThumbnailMaker\/DDThumbnailMaker\/Classes\/DDThumbnailMaker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 366,
+      "length": 3,
+      "value": "144"
+    }
+  ]
+}
