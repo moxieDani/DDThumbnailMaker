@@ -33,6 +33,9 @@ DDThumbnailMaker is available for XCFramework.
   // init DDThumbnailMaker
   let thumbnailMaker = DDThumbnailMaker.init(<URL>)
 
+  // Or you init DDThumbnailMaker by setting your cutstomized AVAsset
+  let thumbnailMaker = DDThumbnailMaker.init(<AVAsset>)
+
   // Set configuration - image size of output thumbnail
   thumbnailMaker.thumbnailImageSize = CGSize(width: <width>, height: <height>)
 
@@ -44,7 +47,9 @@ DDThumbnailMaker is available for XCFramework.
 
   // Generate thumbnails.
   thumbnailMaker.generate { requestedTime, image, actualTime, result, error in
-      // Do something when a thumbnail generated.
+      // Do something when a thumbnail frame generated.
+  } completion: {
+      // Do something when generate completed.
   }
   
   ....

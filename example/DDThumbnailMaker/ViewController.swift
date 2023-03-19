@@ -27,13 +27,18 @@ class ViewController: UIViewController {
         let thumbnailMaker = DDThumbnailMaker.init(videoURL)
         thumbnailMaker.thumbnailImageSize = CGSize(width: self.thumbnailImageWidth, height: self.thumbnailImageHeight)
         thumbnailMaker.intervalMsec = 1000
-        thumbnailMaker.intervalFrame = 60
+        thumbnailMaker.intervalFrame = 10
+        
+        var imagesListArray = [UIImage]()
         thumbnailMaker.generate { requestedTime, image, actualTime, result, error in
             if result == .succeeded {
-                let img = UIImage(cgImage: image!)
-                DispatchQueue.main.async {
-                    self.imageView.image = img
-                }
+                imagesListArray.append(UIImage(cgImage: image!))
+            }
+        } completion: {
+            DispatchQueue.main.async {
+                self.imageView.animationImages = imagesListArray
+                self.imageView.animationDuration = 1.0
+                self.imageView.startAnimating()
             }
         }
     }
