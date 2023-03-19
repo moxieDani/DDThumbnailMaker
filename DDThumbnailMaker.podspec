@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'DDThumbnailMaker'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'DDThumbnailMaker is making thumbnail images by msec or frame.'
 
 # This description is used to generate tags and improve search results.
@@ -14,6 +14,9 @@ Pod::Spec.new do |s|
   // init DDThumbnailMaker
   let thumbnailMaker = DDThumbnailMaker.init(<URL>)
 
+  // Or you init DDThumbnailMaker by setting your cutstomized AVAsset
+  let thumbnailMaker = DDThumbnailMaker.init(<AVAsset>)
+
   // Set configuration - image size of output thumbnail
   thumbnailMaker.thumbnailImageSize = CGSize(width: <width>, height: <height>)
 
@@ -23,9 +26,11 @@ Pod::Spec.new do |s|
   // Set configuration - interval of the number of frame. This ignores the settings of intervalMesec.
   thumbnailMaker.intervalFrame = 60
 
-  // Start to generate thumbnails.
+  // Generate thumbnails.
   thumbnailMaker.generate { requestedTime, image, actualTime, result, error in
-      // Do something when a thumbnail generated.
+      // Do something when a thumbnail frame generated.
+  } completion: {
+      // Do something when generate completed.
   }
   '''
   DESC
