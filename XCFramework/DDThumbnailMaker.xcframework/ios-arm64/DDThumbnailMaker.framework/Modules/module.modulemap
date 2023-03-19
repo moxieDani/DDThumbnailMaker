@@ -1,4 +1,0 @@
-framework module DDThumbnailMaker {
-  header "DDThumbnailMaker-Swift.h"
-  requires objc
-}
