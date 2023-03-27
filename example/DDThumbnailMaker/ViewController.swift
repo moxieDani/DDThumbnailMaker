@@ -8,6 +8,7 @@
 
 import UIKit
 import DDThumbnailMaker
+import CoreMedia
 
 class ViewController: UIViewController {
 
@@ -28,6 +29,9 @@ class ViewController: UIViewController {
         thumbnailMaker.thumbnailImageSize = CGSize(width: self.thumbnailImageWidth, height: self.thumbnailImageHeight)
         thumbnailMaker.intervalMsec = 1000
         thumbnailMaker.intervalFrame = 10
+        let startTime = CMTime(seconds: 0, preferredTimescale: CMTimeScale(NSEC_PER_MSEC))
+        let endTime = CMTime(seconds: 5.2, preferredTimescale: CMTimeScale(NSEC_PER_MSEC))
+        thumbnailMaker.targetDuration = CMTimeRange(start: startTime, end: endTime)
         
         var imagesListArray = [UIImage]()
         thumbnailMaker.generate { requestedTime, image, actualTime, result, error in
