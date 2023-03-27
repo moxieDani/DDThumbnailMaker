@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'DDThumbnailMaker'
-  s.version          = '0.2.2'
+  s.version          = '0.3.0'
   s.summary          = 'DDThumbnailMaker is making thumbnail images by msec or frame.'
 
 # This description is used to generate tags and improve search results.
@@ -25,6 +25,11 @@ Pod::Spec.new do |s|
 
   // Set configuration - interval of the number of frame. This ignores the settings of intervalMesec.
   thumbnailMaker.intervalFrame = 60
+
+  // Set target duration - the specific time range of the video. Below is an example for setting targetDuration from 3.5sec to 5.2sec
+  let startTime = CMTime(seconds: 3.5, preferredTimescale: CMTimeScale(NSEC_PER_MSEC))
+  let endTime = CMTime(seconds: 5.2, preferredTimescale: CMTimeScale(NSEC_PER_MSEC))
+  self.targetDuration = CMTimeRange(start: startTime, end: endTime)
 
   // Generate thumbnails.
   thumbnailMaker.generate { requestedTime, image, actualTime, result, error in

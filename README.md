@@ -27,7 +27,7 @@ DDThumbnailMaker is available for XCFramework.
 ## How to use
 ```swift
   import DDThumbnailMaker
-  
+  import CoreMedia
   ....
 
   // init DDThumbnailMaker
@@ -44,6 +44,11 @@ DDThumbnailMaker is available for XCFramework.
 
   // Set configuration - interval of the number of frame. This ignores the settings of intervalMesec.
   thumbnailMaker.intervalFrame = 60 //60 frames
+
+  // Set target duration - the specific time range of the video. Below is an example for setting targetDuration from 3.5sec to 5.2sec
+  let startTime = CMTime(seconds: 3.5, preferredTimescale: CMTimeScale(NSEC_PER_MSEC))
+  let endTime = CMTime(seconds: 5.2, preferredTimescale: CMTimeScale(NSEC_PER_MSEC))
+  self.targetDuration = CMTimeRange(start: startTime, end: endTime)
 
   // Generate thumbnails.
   thumbnailMaker.generate { requestedTime, image, actualTime, result, error in
