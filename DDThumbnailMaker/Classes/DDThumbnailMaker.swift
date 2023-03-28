@@ -94,9 +94,7 @@ public class DDThumbnailMaker {
         let durationTimescale = self.duration.timescale
         let durationFlags = self.duration.flags
         let durationEpoch = self.duration.epoch
-
         let numberOfFrames = durationValue * Int64(self.frameRate) / Int64(durationTimescale)
-        let timeValuePerFrame = Int(durationTimescale) / self.frameRate
         
         var times: [NSValue] = []
         for i in 1...numberOfFrames {
