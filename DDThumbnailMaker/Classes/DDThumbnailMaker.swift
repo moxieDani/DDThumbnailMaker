@@ -10,7 +10,11 @@ import UIKit
 import AVKit
 
 public class DDThumbnailMaker {
-    public var avAsset: AVAsset! = nil
+    public var avAsset: AVAsset! = nil {
+        didSet {
+            self.initAsset()
+        }
+    }
     public var intervalMsec: CMTimeValue! = 1000
     public var intervalFrame: UInt! = 0
     public var targetDuration: CMTimeRange! = nil
