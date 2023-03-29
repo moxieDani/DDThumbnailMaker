@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 import AVKit
-import Foundation
 
 public class DDThumbnailMaker {
     public var avAsset: AVAsset! = nil
