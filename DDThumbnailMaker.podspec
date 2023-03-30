@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'DDThumbnailMaker'
-  s.version          = '0.3.2'
+  s.version          = '0.4.0'
   s.summary          = 'DDThumbnailMaker is making thumbnail images by msec or frame.'
 
 # This description is used to generate tags and improve search results.
@@ -17,6 +17,12 @@ Pod::Spec.new do |s|
   // Or you init DDThumbnailMaker by setting your cutstomized AVAsset
   let thumbnailMaker = DDThumbnailMaker.init(<AVAsset>)
 
+  // Get video information - tracks, resolution, duration and frame rate(FPS) from AVAsset. Below is an example for checking video information.
+  print(thumbnailMaker.videoInfo.videoTracks)
+  print(thumbnailMaker.videoInfo.resolution)
+  print(thumbnailMaker.videoInfo.duration)
+  print(thumbnailMaker.videoInfo.frameRate)
+
   // Set configuration - image size of output thumbnail
   thumbnailMaker.thumbnailImageSize = CGSize(width: <width>, height: <height>)
 
@@ -26,10 +32,13 @@ Pod::Spec.new do |s|
   // Set configuration - interval of the number of frame. This ignores the settings of intervalMesec.
   thumbnailMaker.intervalFrame = 60
 
-  // Set target duration - the specific time range of the video. Below is an example for setting targetDuration from 3.5sec to 5.2sec
+  // Set target duration - the specific time range of the video to generate thumbnails. Below is an example for setting targetDuration from 3.5sec to 5.2sec
   let startTime = CMTime(seconds: 3.5, preferredTimescale: CMTimeScale(NSEC_PER_MSEC))
   let endTime = CMTime(seconds: 5.2, preferredTimescale: CMTimeScale(NSEC_PER_MSEC))
   thumbnailMaker.targetDuration = CMTimeRange(start: startTime, end: endTime)
+
+  // Set target frame rate - the specific frame rate of the video to generate thumbnails. Below is an example for setting targetFrameRate to 24fps.
+  thumbnailMaker.targetFrameRate = 24
 
   // Generate thumbnails.
   thumbnailMaker.generate { requestedTime, image, actualTime, result, error in

@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         let startTime = CMTime(seconds: 0, preferredTimescale: CMTimeScale(NSEC_PER_MSEC))
         let endTime = CMTime(seconds: 5.2, preferredTimescale: CMTimeScale(NSEC_PER_MSEC))
         thumbnailMaker.targetDuration = CMTimeRange(start: startTime, end: endTime)
+        thumbnailMaker.targetFrameRate = 60
         
         var imagesListArray = [UIImage]()
         thumbnailMaker.generate { requestedTime, image, actualTime, result, error in
